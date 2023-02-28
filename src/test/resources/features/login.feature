@@ -24,7 +24,7 @@ Feature: Users should be able to login
       | User3    | Userpass123 |
       | User4    | Userpass123 |
       | User5    | Userpass123 |
-
+      #add more username and password if needed
 
   Scenario Outline: Verify login as Employee
     Given the Employee enters correct username "<username>"
@@ -37,4 +37,4 @@ Feature: Users should be able to login
       | Employee3 | Employee123 |
       | Employee4 | Employee123 |
       | Employee5 | Employee123 |
-
+      #add more username and password if needed
