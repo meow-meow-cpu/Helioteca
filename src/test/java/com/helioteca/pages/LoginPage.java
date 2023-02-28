@@ -17,7 +17,7 @@ public class LoginPage {                                            //!!!!!!!!!!
 
 
 
-    @FindBy()                       //Emily
+    @FindBy(id="password")                       //Emily
     public WebElement password;
 
     @FindBy()                       //Rauf
