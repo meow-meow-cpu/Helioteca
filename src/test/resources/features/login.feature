@@ -1,22 +1,15 @@
-@login
-Feature: Users should be able to login
 
-  Background: User is already in the log in page
+Feature: Users should be able to login with user and employee credentials
+
+
+ Background: User is already in the log in page
     Given the user is on the login page
-
-
-
-    #Emily, make it a scenario outline
   @wip
-  Scenario: Verify login with different user types
-    Given the user logged in as "<userType>"
-    Given the user logged in with username as "User1" and password as "UserUser123"
-
-
   Scenario Outline: Verify login
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
+
     Examples:
       | username  | password    |
       | User1     | Userpass123 |
@@ -30,3 +23,8 @@ Feature: Users should be able to login
      # | Employee4 | Employee123 |
      # | Employee5 | Employee123 |
       #add more username and password if needed
+
+
+  #Scenario: Verify login with different user types
+  #  Given the user logged in as "<userType>"
+  #  Given the user logged in with username as "User1" and password as "UserUser123"
