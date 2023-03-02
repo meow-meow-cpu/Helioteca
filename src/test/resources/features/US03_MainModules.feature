@@ -3,13 +3,13 @@ Feature: Users should be able to access all the main modules of the app
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @wip
-  Scenario Outline: Verify login
+  @emily
+  Scenario Outline: Verify main modules are accessible
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
-    Then the user should see the main modules listed below
-    And the use should be able to click each module
+    Then the user should be on the dashboard
+    And the user should see the below modules
       | Files    |
       | Photos   |
       | Activity |
@@ -19,6 +19,7 @@ Feature: Users should be able to access all the main modules of the app
       | Notes    |
       | Deck     |
       | Tasks    |
+    And the user should be able to click on each module
 
     Examples:
       | username  | password    |
@@ -27,7 +28,7 @@ Feature: Users should be able to access all the main modules of the app
      # | User3     | Userpass123 |
      # | User4     | Userpass123 |
      # | User5     | Userpass123 |
-      | Employee1 | Employee123 |
+     # | Employee1 | Employee123 |
      # | Employee2 | Employee123 |
      # | Employee3 | Employee123 |
      # | Employee4 | Employee123 |
