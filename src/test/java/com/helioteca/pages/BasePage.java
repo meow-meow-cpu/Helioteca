@@ -23,7 +23,12 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a[@href='/index.php/apps/files/']")                     //Ali
+    public void navigateTo(String page){
+        WebElement linkToPage = Driver.getDriver().findElement(By.xpath("//a[@aria-label='"+page+"']"));
+        linkToPage.click();
+    }
+
+    @FindBy()                     //Ali
     public  WebElement files;
 
     @FindBy()                     //Dili

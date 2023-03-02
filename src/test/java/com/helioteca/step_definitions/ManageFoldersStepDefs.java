@@ -1,6 +1,6 @@
 package com.helioteca.step_definitions;
 
-import com.helioteca.pages.FilesPage;
+import com.helioteca.pages.FilesPage_AO;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class ManageFoldersStepDefs extends FilesPage {
+public class ManageFoldersStepDefs extends FilesPage_AO {
 
 
     //FilesPage filesPage = new FilesPage();
@@ -67,8 +67,30 @@ public class ManageFoldersStepDefs extends FilesPage {
 
 
     @And("user choose a folder {string} from the page")
-    public void userChooseAFolderFromThePage(String arg0) {
+    public void userChooseAFolderFromThePage(String fldrName) {
+        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='"+fldrName+"']"));
+        newFolder.click();
+    }
+
+    @When("the user uploads a file with the upload file option")
+    public void theUserUploadsAFileWithTheUploadFileOption() {
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.elementToBeClickable(plusButton));
+        plusButton.click();
+        String path = "C:\\Users\\artog\\Downloads\\empty.txt";
+        uploadFile.sendKeys(path);
+        uploadButton.click();
 
 
+    }
+
+    @Then("Verify the file is displayed on the page")
+    public void verifyTheFileIsDisplayedOnThePage() {
+        Assert.assertTrue(topFile.isDisplayed());
+    }
+
+    @When("the user clicks the {string} module")
+    public void theUserClicksTheModule(String page) {
+        navigateTo(page);
     }
 }
