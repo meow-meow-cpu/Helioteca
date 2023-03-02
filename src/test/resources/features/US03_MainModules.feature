@@ -8,6 +8,17 @@ Feature: Users should be able to access all the main modules of the app
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
+    Then the user should see the main modules listed below
+    And the use should be able to click each module
+      | Files    |
+      | Photos   |
+      | Activity |
+      | Mail     |
+      | Contacts |
+      | Calendar |
+      | Notes    |
+      | Deck     |
+      | Tasks    |
 
     Examples:
       | username  | password    |
