@@ -11,10 +11,10 @@ public class FilesPage extends BasePage {
     @FindBy(xpath = "//a[@data-action='folder']")
     public WebElement newFolder;
 
-    @FindBy(className = "filenameform")
+    @FindBy(xpath = "//form[@class='filenameform']/input")
     public WebElement folderName;
 
-    @FindBy(xpath = "//input[@type='submit']")
+    @FindBy(xpath = "(//input[@type='submit'])[2]")
     public WebElement submitButton;
 
 

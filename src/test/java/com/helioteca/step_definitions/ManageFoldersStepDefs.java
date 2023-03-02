@@ -6,7 +6,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -46,9 +48,8 @@ public class ManageFoldersStepDefs extends FilesPage {
     }
 
     @And("user write a folder {string}")
-    public String userWriteAFolder(String fldrName) {
+    public void userWriteAFolder(String fldrName) {
         folderName.sendKeys(fldrName);
-        return fldrName;
     }
 
     @When("the user click submit icon")
@@ -56,9 +57,11 @@ public class ManageFoldersStepDefs extends FilesPage {
         submitButton.click();
     }
 
-    @Then("Verify the folder is displayed on the page")
-    public void verifyTheFolderIsDisplayedOnThePage() {
-        Driver.getDriver().findElement(By.xpath("//span[@class='"++"']"))
+
+    @Then("Verify the folder {string} is displayed on the page")
+    public void verifyTheFolderIsDisplayedOnThePage(String fldrName) {
+        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='New Folder User']\n"));
+        Assert.assertTrue(newFolder.isDisplayed());
     }
 
 
