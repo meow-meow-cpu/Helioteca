@@ -23,8 +23,8 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy()                     //Ali
-    public List<WebElement> files;
+    @FindBy(xpath = "//a[@href='/index.php/apps/files/']")                     //Ali
+    public  WebElement files;
 
     @FindBy()                     //Dili
     public WebElement photos;
