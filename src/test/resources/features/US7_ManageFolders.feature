@@ -17,15 +17,25 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
     Then Verify the folder "<name>" is displayed on the page
 
     Examples:
-      | username  | password    | name            |
-      | User64     | Userpass123 | New Folder1 User |
-     # | User2     | Userpass123 |
-     # | User3     | Userpass123 |
-     # | User4     | Userpass123 |
-     # | User5     | Userpass123 |
-      | Employee64 | Employee123 | New Folder1 Emp  |
-     # | Employee2 | Employee123 |
-     # | Employee3 | Employee123 |
-     # | Employee4 | Employee123 |
-     # | Employee5 | Employee123 |
-      #add more username and password if needed
+      | username   | password    | name             |
+      | User64     | Userpass123 | New Folder5 User |
+      | Employee64 | Employee123 | New Folder5 Emp  |
+
+  @wip
+  Scenario Outline: Verify users can upload a file inside a folder
+    Given the user enters correct username "<username>"
+    Then the user enters correct password "<password>"
+    Then the user clicks on Log in button
+    Given user on the dashboard page
+    When the user clicks the Files module
+    And user choose a folder "<name>" from the page
+    And user clicks the add icon on the top
+    When the user uploads a file with the upload file option
+    Then Verify the file is displayed on the page
+
+
+
+    Examples:
+      | username   | password    | name             |
+      | User64     | Userpass123 | New Folder5 User |
+      | Employee64 | Employee123 | New Folder5 Emp  |

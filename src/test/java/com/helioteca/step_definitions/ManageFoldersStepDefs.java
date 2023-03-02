@@ -60,9 +60,15 @@ public class ManageFoldersStepDefs extends FilesPage {
 
     @Then("Verify the folder {string} is displayed on the page")
     public void verifyTheFolderIsDisplayedOnThePage(String fldrName) {
-        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='New Folder User']\n"));
-        Assert.assertTrue(newFolder.isDisplayed());
+        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='"+fldrName+"']"));
+       //Assert.assertTrue(newFolder.isDisplayed());
+        Assert.assertEquals(newFolder.getText(),fldrName);
     }
 
 
+    @And("user choose a folder {string} from the page")
+    public void userChooseAFolderFromThePage(String arg0) {
+
+
+    }
 }
