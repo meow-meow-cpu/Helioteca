@@ -19,7 +19,7 @@ Feature: Users should be able to access all the main modules of the app
       | Notes    |
       | Deck     |
       | Tasks    |
-    And the user should be able to click on each module
+
 
     Examples:
       | username  | password    |

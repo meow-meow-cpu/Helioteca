@@ -23,6 +23,11 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    public void navigateTo(String page){
+        WebElement linkToPage = Driver.getDriver().findElement(By.xpath("//a[@aria-label='"+page+"']"));
+        linkToPage.click();
+    }
+
     @FindBy()                     //Ali
     public WebElement files;
 
