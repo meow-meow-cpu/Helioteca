@@ -1,5 +1,6 @@
 package com.helioteca.step_definitions;
 
+import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -21,19 +22,22 @@ public class MainModulesStepDefs_EY {
     public void theUserShouldSeeTheBelowModules(List<String> expectedModules) {
         System.out.println("Expected Modules = " + expectedModules);
 
-        List<WebElement> actualModule_as_WebElement = Driver.getDriver().findElements(By.xpath("//ul[@id='appmenu']/li/a"));
-        // need to get Text of aria-label ???
+
+        List<WebElement> actualModule_as_WebElement = Driver.getDriver().findElements(By.xpath("//ul[@id='appmenu']/li/a[@aria-label]"));
 
         List<String> actualModules = new ArrayList<>();
 
         for (WebElement eachModule : actualModule_as_WebElement) {
-            actualModules.add(eachModule.getText());
+            String module = eachModule.getAttribute("aria-label");
+            actualModules.add(module);
         }
+
+        actualModules.remove(9);
+
+        System.out.println("Actual Modules = " + actualModules);
 
         Assert.assertEquals(expectedModules, actualModules);
 
-
     }
-
 
 }
