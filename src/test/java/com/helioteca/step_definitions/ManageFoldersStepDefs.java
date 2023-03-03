@@ -60,37 +60,39 @@ public class ManageFoldersStepDefs extends FilesPage_AO {
 
     @Then("Verify the folder {string} is displayed on the page")
     public void verifyTheFolderIsDisplayedOnThePage(String fldrName) {
-        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='"+fldrName+"']"));
-       //Assert.assertTrue(newFolder.isDisplayed());
-        Assert.assertEquals(newFolder.getText(),fldrName);
+        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='" + fldrName + "']"));
+        //Assert.assertTrue(newFolder.isDisplayed());
+        Assert.assertEquals(newFolder.getText(), fldrName);
     }
 
 
     @And("user choose a folder {string} from the page")
     public void userChooseAFolderFromThePage(String fldrName) {
-        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='"+fldrName+"']"));
+        WebElement newFolder = Driver.getDriver().findElement(By.xpath("//tr[@data-file='" + fldrName + "']"));
         newFolder.click();
     }
 
-    @When("the user uploads a file with the upload file option")
-    public void theUserUploadsAFileWithTheUploadFileOption() {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.elementToBeClickable(plusButton));
-        plusButton.click();
-        String path = "C:\\Users\\artog\\Downloads\\empty.txt";
-        uploadFile.sendKeys(path);
-        uploadButton.click();
-
-
+    //  @When("the user uploads a file with the upload file option")
+    // public void theUserUploadsAFileWithTheUploadFileOption() {
+    //      String path = "C:\\Users\\artog\\Downloads\\empty.txt";
+    //       WebElement uploadFileElement = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
+    //       uploadFileElement.sendKeys(path);
+    //   }
+    @When("the user uploads a file from {string} with the upload file option")
+    public void theUserUploadsAFileFromWithTheUploadFileOption(String path) {
+        WebElement uploadFileElement = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
+        uploadFileElement.sendKeys(path);
     }
 
     @Then("Verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
-        Assert.assertTrue(topFile.isDisplayed());
+        Assert.assertTrue(newFile.isDisplayed());
     }
 
     @When("the user clicks the {string} module")
     public void theUserClicksTheModule(String page) {
         navigateTo(page);
     }
+
+
 }

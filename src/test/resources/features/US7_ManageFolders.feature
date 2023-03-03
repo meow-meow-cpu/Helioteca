@@ -18,8 +18,8 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
 
     Examples:
       | username   | password    | name             |
-      | User81     | Userpass123 | New Folder3 User |
-      | Employee81 | Employee123 | New Folder3 Emp  |
+      | User81     | Userpass123 | New Folder6 User |
+      | Employee81 | Employee123 | New Folder6 Emp  |
 
   @wip
   Scenario Outline: Verify users can upload a file inside a folder
@@ -30,10 +30,10 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
     When the user clicks the "Files" module
     And user choose a folder "<name>" from the page
     And user clicks the add icon on the top
-    When the user uploads a file with the upload file option
+    When the user uploads a file from "C:\Users\artog\Downloads\empty.txt" with the upload file option
     Then Verify the file is displayed on the page
 
     Examples:
       | username   | password    | name             |
-      | User81    | Userpass123 | New Folder3 User |
-      | Employee81| Employee123 | New Folder3 Emp  |
+      | User81    | Userpass123 | New Folder6 User |
+      | Employee81| Employee123 | New Folder6 Emp  |

@@ -11,7 +11,7 @@ public class FilesPage_AO extends BasePage {
     @FindBy(xpath = "//a[@data-action='folder']")
     public WebElement newFolder;
 
-    @FindBy(xpath = "//a[@data-action='upload']")
+    @FindBy(xpath = "//label[@data-action='upload']")
     public WebElement uploadFile;
 
     @FindBy(xpath = "//form[@class='filenameform']/input")
@@ -23,8 +23,8 @@ public class FilesPage_AO extends BasePage {
     @FindBy(id = "file-upload")
     public WebElement uploadButton;
 
-    @FindBy(xpath = "//tbody[@id='fileList']/tr")
-    public WebElement topFile;
+    @FindBy(xpath = "//tr[@data-type='file']")
+    public WebElement newFile;
 
 
 
