@@ -7,8 +7,8 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class LoginStepDefs {
-    LoginPage loginPage = new LoginPage();
+public class LoginStepDefs extends LoginPage {
+    //LoginPage loginPage = new LoginPage();
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
@@ -17,17 +17,17 @@ public class LoginStepDefs {
 
     @Given("the user enters correct username {string}")
     public void theUserEntersCorrectUsername(String username) {
-        loginPage.userName.sendKeys(username);
+        userName.sendKeys(username);
     }
 
     @Then("the user enters correct password {string}")
-    public void theUserEntersCorrectPassword(String password) {
-        loginPage.password.sendKeys(password);
+    public void theUserEntersCorrectPassword(String pass) {
+        password.sendKeys(pass);
     }
 
     @And("the user clicks on Log in button")
     public void theUserClicksOnLogInButton() {
-        loginPage.loginBtn.click();
+        loginBtn.click();
     }
 
 
