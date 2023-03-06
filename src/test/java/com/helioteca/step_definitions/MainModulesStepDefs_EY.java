@@ -1,9 +1,12 @@
 package com.helioteca.step_definitions;
 
+import com.helioteca.pages.BasePage_EY;
 import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import org.apache.commons.io.input.BrokenInputStream;
+import org.jsoup.Connection;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -37,7 +40,39 @@ public class MainModulesStepDefs_EY {
         System.out.println("Actual Modules = " + actualModules);
 
         Assert.assertEquals(expectedModules, actualModules);
-
     }
 
-}
+    BasePage_EY basePage_ey = new BasePage_EY();
+
+    @Then("the user should be able to click on each module and see each module page")
+    public void theUserShouldBeAbleToClickOnEachModuleAndSeeEachModulePage() {
+
+        basePage_ey.files.click();
+        BrowserUtils.verifyTitleContains("Files");
+
+        basePage_ey.photos.click();
+        BrowserUtils.verifyTitleContains("Photos");
+
+        basePage_ey.activity.click();
+        BrowserUtils.verifyTitleContains("Activity");
+
+        basePage_ey.mail.click();
+        BrowserUtils.verifyTitleContains("Mail");
+
+        basePage_ey.contacts.click();
+        BrowserUtils.verifyTitleContains("Contacts");
+
+        basePage_ey.calendar.click();
+        BrowserUtils.verifyTitleContains("Calendar");
+
+        basePage_ey.notes.click();
+        BrowserUtils.verifyTitleContains("Notes");
+
+        basePage_ey.deck.click();
+        BrowserUtils.verifyTitleContains("Deck");
+
+        basePage_ey.tasks.click();
+        BrowserUtils.verifyTitleContains("Tasks");
+        }
+    }
+
