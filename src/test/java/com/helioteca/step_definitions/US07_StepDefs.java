@@ -26,7 +26,6 @@ public class US07_StepDefs {
         uploadFilePageRa.navigateToModule(moduleName).click();
     }
 
-
     @When("the user clicks the add icon on the top")
     public void theUserClicksTheAddIconOnTheTop() {
         uploadFilePageRa.uploadIconBtn.click();
