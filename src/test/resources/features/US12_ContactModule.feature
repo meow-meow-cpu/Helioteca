@@ -12,5 +12,6 @@ Feature: As a user, I should be able to access to Contacts module.
     Then verify the page title is "Contacts - Helioteca”
 
     Examples:
-      | username | password    |
-      | User1    | Userpass123 |
+      | username  | password    |
+      | User1     | Userpass123 |
+      | Employee1 | Employee123 |
