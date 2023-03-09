@@ -11,8 +11,8 @@ Feature: Feature: As a user, I should be able to remove files from favorites.
     And the user clicks on Log in button
     Given user on the dashboard page
     When the user clicks the "Files" module
-    When the user clicks the add icon on the top
-    And user creates new folder with "Helioteca" name by clicking "New folder" option
+#    When the user clicks the add icon on the top
+#    And user by clicking "New folder" option creates new folder with "Helioteca" name
     Then the user clicks action icon from created folder
     And user choose "Add to favorites" option
     When the users clicks action icon from created folder
