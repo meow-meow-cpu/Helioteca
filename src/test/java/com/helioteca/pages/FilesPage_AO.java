@@ -26,6 +26,9 @@ public class FilesPage_AO extends BasePage {
     @FindBy(xpath = "//tr[@data-type='file']")
     public WebElement newFile;
 
+    @FindBy(xpath = "//input[@type='file']")
+    public WebElement uploadFileOpt;
+
 
 
 

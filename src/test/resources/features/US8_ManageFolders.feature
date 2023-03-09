@@ -30,7 +30,7 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
     When the user clicks the "Files" module
     And user choose a folder "<name>" from the page
     And user clicks the add icon on the top
-    When the user uploads a file from "C:\Users\artog\Downloads\empty.txt" with the upload file option
+    When user uploads file with the “upload file” option
     Then Verify the file is displayed on the page
 
     Examples:

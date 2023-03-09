@@ -12,6 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 
 public class ManageFoldersStepDefs extends FilesPage_AO {
@@ -78,10 +79,12 @@ public class ManageFoldersStepDefs extends FilesPage_AO {
     //       WebElement uploadFileElement = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
     //       uploadFileElement.sendKeys(path);
     //   }
-    @When("the user uploads a file from {string} with the upload file option")
-    public void theUserUploadsAFileFromWithTheUploadFileOption(String path) {
-        WebElement uploadFileElement = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
-        uploadFileElement.sendKeys(path);
+
+
+    @And("user uploads file with the “upload file” option")
+    public void usersUploadsFileWithTheUploadFileOption() {
+        String absolutePath = new File("src/test/resources/Files/forTest.txt").getAbsolutePath();
+        uploadFileOpt.sendKeys(absolutePath);
     }
 
     @Then("Verify the file is displayed on the page")
