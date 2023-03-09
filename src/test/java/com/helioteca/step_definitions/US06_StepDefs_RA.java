@@ -21,7 +21,7 @@ public class US06_StepDefs_RA {
         removeFromFavoritesPageRA.navigateToModule(moduleName).click();
     }
 
-    @When("the users clicks action icon from any file or folder on the page to remove")
+    @When("the users clicks action icon from created folder")
     public void theUsersClicksActionIconFromAnyFileOrFolderOnThePageToRemove() {
         removeFromFavoritesPageRA.favoriteActionBtn.click();
     }
@@ -38,7 +38,7 @@ public class US06_StepDefs_RA {
 
     @Then("Verify that the file is not listed in the Favorites table")
     public void verifyThatTheFileIsNotListedInTheFavoritesTable() {
-        BrowserUtils.veri
+
     }
 
 
