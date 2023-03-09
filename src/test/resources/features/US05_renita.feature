@@ -1,28 +1,29 @@
 Feature: Users should be able to login with user and employee credentials
 
 
- Background: User is already in the log in page
+  Background: User is already in the log in page
     Given the user is on the login page
-
-  Scenario Outline: Verify login
+  @wip
+  Scenario Outline: Verify users to add files to Favorites
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
+    Given user on the dashboard page
+    When the user clicks the Files module
+    When the user clicks action-icon from any file on the page
+    And user choose the Add to favorites option
+    And user click the Favorites sub-module on the left side
+    Then Verify the chosen file is listed on the table
+
+
 
     Examples:
       | username  | password    |
       | User1     | Userpass123 |
-     # | User2     | Userpass123 |
-     # | User3     | Userpass123 |
-     # | User4     | Userpass123 |
-     # | User5     | Userpass123 |
-      | Employee1 | Employee123 |
-     # | Employee2 | Employee123 |
-     # | Employee3 | Employee123 |
-     # | Employee4 | Employee123 |
-     # | Employee5 | Employee123 |
-      #add more username and password if needed
+
 
   #Scenario: Verify login with different user types
   #  Given the user logged in as "<userType>"
   #  Given the user logged in with username as "User1" and password as "UserUser123"
+
+
