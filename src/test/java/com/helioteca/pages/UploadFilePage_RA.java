@@ -9,6 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class UploadFilePage_RA extends LoginPage{
 
+    @FindBy(css = "a[id='nextcloud']")
+    public WebElement dashboardPage;
+
     public WebElement navigateToModule(String moduleName){
         return Driver.getDriver().findElement(By.xpath("//ul//li//a[@aria-label='" + moduleName + "']"));
     }

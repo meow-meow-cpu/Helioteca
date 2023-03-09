@@ -18,7 +18,7 @@ public class US07_StepDefs {
 
     @Given("user on the dashboard page")
     public void userOnTheDashboardPage() {
-        Driver.getDriver().get("https://qa.helioteca.com/index.php/apps/files/?dir=/&fileid=2609");
+        uploadFilePageRa.dashboardPage.click();
     }
 
     @When("the user clicks the {string} module")
@@ -41,6 +41,6 @@ public class US07_StepDefs {
 
     @Then("verify the file is displayed on the page")
     public void verifyTheFileIsDisplayedOnThePage() {
-        Assert.assertTrue(uploadFilePageRa.uploadedFile.isDisplayed());
+        BrowserUtils.verifyElementDisplayed(uploadFilePageRa.uploadedFile);
     }
 }
