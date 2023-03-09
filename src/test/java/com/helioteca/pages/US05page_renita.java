@@ -19,7 +19,7 @@ public US05page_renita(){
 
 
 
-@FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[2]/a[2]")
+@FindBy(xpath = "//*[@id="fileList"]/tr/td[2]/a/span[3]/a[2]")
     public WebElement Actions;
 
 @FindBy(xpath = "//*[@id=\"fileList\"]/tr[1]/td[2]/a/span[1]/span")
