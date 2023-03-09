@@ -4,7 +4,7 @@ Feature: Users should be able to login with user and employee credentials
 
  Background: User is already in the log in page
     Given the user is on the login page
-  @wip
+
   Scenario Outline: Verify login
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
