@@ -19,8 +19,9 @@ Feature: Users should be able to access Photos module of the app
 
 
     Examples:
-      | username | password    |
-      | User1    | Userpass123 |
+      | username  | password    |
+      | User1     | Userpass123 |
+      # bug found for User1
      # | User2     | Userpass123 |
      # | User3     | Userpass123 |
      # | User4     | Userpass123 |
