@@ -3,11 +3,14 @@ Feature: As a user, I should be able to update settings.
 
   Background: User is already in the log in page
     Given the user is on the login page
+
   @wip
   Scenario Outline: Verify login
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
+
+
 
     Examples:
       | username  | password    |
@@ -21,6 +24,7 @@ Feature: As a user, I should be able to update settings.
      # | Employee3 | Employee123 |
      # | Employee4 | Employee123 |
      # | Employee5 | Employee123 |
+
 
   Scenario: Verify users update settings
     Given user on the dashboard page
