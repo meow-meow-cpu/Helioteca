@@ -10,7 +10,7 @@ Feature: Users should be able to access Photos module of the app
     And the user clicks on Log in button
     Then the user should be on the dashboard
     And the user should be able to click on the Photos module
-    Then the user should be able to see the following sub-modules
+    Then the user should be able to see the following submodules
       | Your photos   |
       | Favorites     |
       | Your albums   |
