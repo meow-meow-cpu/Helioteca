@@ -25,7 +25,7 @@ Feature: Users should be able to access Photos module of the app
      # | User3     | Userpass123 |
      # | User4     | Userpass123 |
      # | User5     | Userpass123 |
-     # | Employee1 | Employee123 |
+      | Employee1 | Employee123 |
      # | Employee2 | Employee123 |
      # | Employee3 | Employee123 |
      # | Employee4 | Employee123 |
