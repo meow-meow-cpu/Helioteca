@@ -12,7 +12,7 @@ Feature: Users should be able to write comments to file/folder
     When the user clicks on the Files module
     And the user clicks on action icon from any file on the page
     And the user chooses the Details option
-    And the user writes a comment "good material, thank you for sharing!" inside the input box
+    And the user writes the comment "good material, thank you for sharing!" inside the input box
     And the user clicks the submit button to post it
     Then verify the comment "good material, thank you for sharing!" is displayed in the comment section
 
@@ -23,7 +23,7 @@ Feature: Users should be able to write comments to file/folder
      # | User3     | Userpass123 |
      # | User4     | Userpass123 |
      # | User5     | Userpass123 |
-     # | Employee1 | Employee123 |
+      | Employee1 | Employee123 |
      # | Employee2 | Employee123 |
      # | Employee3 | Employee123 |
      # | Employee4 | Employee123 |

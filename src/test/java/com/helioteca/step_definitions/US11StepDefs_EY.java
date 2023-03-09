@@ -28,8 +28,8 @@ public class US11StepDefs_EY {
         filesModulePage_ey.details.click();
     }
 
-    @Then("the user writes a comment {string} inside the input box")
-    public void the_user_writes_a_comment_inside_the_input_box(String comment) {
+    @Then("the user writes the comment {string} inside the input box")
+    public void the_user_writes_the_comment_inside_the_input_box(String comment) {
         filesModulePage_ey.comments.click();
         filesModulePage_ey.commentsBox.sendKeys(comment);
     }
@@ -43,5 +43,4 @@ public class US11StepDefs_EY {
     public void verify_the_comment_is_displayed_in_the_comment_section(String comment) {
         Assert.assertTrue(filesModulePage_ey.commentPosted.isDisplayed());
     }
-
 }

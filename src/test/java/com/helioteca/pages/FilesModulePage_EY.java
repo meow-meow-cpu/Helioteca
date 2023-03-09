@@ -26,7 +26,7 @@ public class FilesModulePage_EY {
     @FindBy(xpath = "//div[@class='message']")
     public WebElement commentsBox;
 
-    @FindBy(xpath = "//input[@class='confirm']")
+    @FindBy(xpath = "//input[@class='submit icon-confirm has-tooltip']")
     public WebElement send;
 
     @FindBy(xpath = "//div[@id='commentsTabView']/ul/li[@class='comment']")
