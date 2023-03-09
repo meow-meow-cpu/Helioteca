@@ -6,9 +6,10 @@ import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 
 public class LoginStepDefs extends LoginPage {
-    //LoginPage loginPage = new LoginPage();
 
     @Given("the user is on the login page")
     public void theUserIsOnTheLoginPage() {
@@ -60,3 +61,5 @@ public class LoginStepDefs extends LoginPage {
 
 
 }
+
+ */
