@@ -29,6 +29,13 @@ public class LoginPage {                                            //!!!!!!!!!!
 
    //@FindBy(className = "warning_wrongPasswordMsg")
     //public WebElement wrongMsg;
+    
+    public void login(String userNameStr, String passwordStr) {
+        userName.sendKeys(userNameStr);
+        password.sendKeys(passwordStr);
+        loginBtn.click();
+        // verification that we logged
+    }
 
 
 
