@@ -16,22 +16,23 @@ public class RemoveFromFavoritesPageRA extends LoginPage {
 
     @FindBy(xpath = "//div[@class='favorite-mark permanent']/../../..//a[@data-action='menu']")
     public WebElement favoriteActionBtn;
-//
-//    public WebElement navigateToOption(String optionName){
-//        return Driver.getDriver().findElement(By.xpath("//tr/td//a[@data-action='"+optionName+"']"));
-//    }
-//
-//    @FindBy(id = "commentsTabView")
-//    public WebElement commentTabBtn;
-//
-//    @FindBy(xpath = "//div[@class='message']")
-//    public WebElement inputBox;
-//
-//    @FindBy(xpath = "//div[@class='message']/following-sibling::input")
-//    public WebElement submitBtn;
-//
-//    public WebElement displayedComment(String comment){
-//        return Driver.getDriver().findElement(By.xpath("//ul[@class='comments']//li//div[.='"+comment+"']"));
-//    }
+
+    public WebElement navigateToOption(String optionName){
+        return Driver.getDriver().findElement(By.xpath("//ul//li//a//span[.='"+optionName+"']"));
+    }
+
+    @FindBy(linkText = "Favorites")
+    public WebElement favoritesSubModule;
+
+
+
+    @FindBy(xpath = "//tbody//span[.='Helioteca Folder']/..//a[@data-action='menu']")
+    public WebElement actionBtn;
+    public void addToFavorites(){
+        navigateToModule("Files").click();
+        actionBtn.click();
+        navigateToOption("Favorite");
+
+    }
 
 }
