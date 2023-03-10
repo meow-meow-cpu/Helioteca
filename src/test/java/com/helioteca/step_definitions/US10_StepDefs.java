@@ -3,6 +3,7 @@ package com.helioteca.step_definitions;
 import com.helioteca.pages.FilesPage_KA;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class US10_StepDefs {
 
@@ -19,5 +20,6 @@ public class US10_StepDefs {
         filesPage_ka.checkBox2.isEnabled();
         filesPage_ka.checkBox3.isEnabled();
     }
+
 
 }

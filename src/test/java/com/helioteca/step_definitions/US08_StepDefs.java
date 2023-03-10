@@ -48,10 +48,11 @@ public class US08_StepDefs extends FilesPage_AO {
 
     @Then("Verify the folder {string} is displayed on the page")
     public void verifyTheFolderIsDisplayedOnThePage(String fldrName) {
+        BrowserUtils.waitFor(3);
         WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='" + fldrName + "']"));
         //Assert.assertTrue(newFolder.isDisplayed());
         Assert.assertEquals(newFolder.getText(), fldrName);
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(3);
         WebElement folderActions = Driver.getDriver().findElement(By.xpath("//span[text()='" + fldrName + "']/parent::span/parent::a/span[@class='fileactions']/a[2]"));
         folderActions.click();
         pressDelete();

@@ -38,7 +38,7 @@ public class US05_StepDefs {
 
     @Then("Verify the chosen file is listed on the table")
     public void verifyTheChosenFileIsListedOnTheTable() {
-
+        BrowserUtils.waitFor(2);
         Assert.assertTrue(files_renita.favFirstElement.isDisplayed());
         //assertion
 

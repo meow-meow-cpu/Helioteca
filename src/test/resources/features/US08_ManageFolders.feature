@@ -1,4 +1,4 @@
-Feature: As a user, I should be able to remove files from the favorites and upload a file directly
+Feature: As a user, I should be able to add/create folders
 
   Background: User is already in the log in page
     Given the user is on the login page
@@ -17,8 +17,8 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
 
     Examples:
       | username   | password    | name              |
-      | User82     | Userpass123 | New Folder10 User |
-      | Employee82 | Employee123 | New Folder10 Emp  |
+      | User83     | Userpass123 | New Folder1 User |
+      | Employee83 | Employee123 | New Folder1 Emp  |
 
   Scenario Outline: Verify users can upload a file inside a folder
     Given the user enters correct username "<username>"
@@ -33,5 +33,5 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
 
     Examples:
       | username   | password    | name             |
-      | User82     | Userpass123 | New Folder6 User |
-      | Employee82 | Employee123 | New Folder6 Emp  |
+      | User82     | Userpass123 | New Folder1 User |
+      | Employee82 | Employee123 | New Folder1 Emp  |
