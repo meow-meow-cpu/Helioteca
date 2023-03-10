@@ -12,26 +12,31 @@ public class LoginPage {                                            //!!!!!!!!!!
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="user")                       //Kamran
+
+    @FindBy (id ="user")
     public WebElement userName;
 
 
-
-    @FindBy(id="password")                       //Emily
+    @FindBy(id ="password")
     public WebElement password;
 
-    @FindBy(id="submit-form")                       //Rauf
-    public WebElement loginBtn;
 
-    @FindBy()                       //Renita
+    @FindBy(id ="submit-form")
+   public WebElement loginBtn;
+
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongMsg;
 
-
+  // @FindBy(className = "warning_wrongPasswordMsg")
+   // public WebElement wrongMsg;
+    
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         loginBtn.click();
         // verification that we logged
     }
+
+
 
 }
