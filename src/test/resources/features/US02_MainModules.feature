@@ -1,9 +1,5 @@
 Feature: Users should be able to login with user and employee credentials
-
-
   #Background: User is already in the log in page
-
-  @WIP
   Scenario Outline:Verify login with valid credentials
     Given the user is on the login page
     When user enter invalid "<username>" and "<password>"
@@ -13,5 +9,5 @@ Feature: Users should be able to login with user and employee credentials
     Examples:
       | username | password    |
       | User9    | Wrong       |
-      | abc   | Userpass123 |
-      | bbn   | Userpass555     |
+      | abc      | Userpass123 |
+      | bbn      | Userpass555 |

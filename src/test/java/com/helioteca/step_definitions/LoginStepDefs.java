@@ -8,7 +8,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 
-
 public class LoginStepDefs extends LoginPage {
 
     @Given("the user is on the login page")
@@ -57,7 +56,6 @@ public class LoginStepDefs extends LoginPage {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
     }
-
 
 
 }

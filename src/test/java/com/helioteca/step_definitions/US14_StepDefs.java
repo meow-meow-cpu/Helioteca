@@ -1,6 +1,5 @@
 package com.helioteca.step_definitions;
 
-import com.helioteca.pages.PhotosModulePage_EY;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -12,16 +11,11 @@ import java.util.List;
 
 public class US14_StepDefs {
 
-    PhotosModulePage_EY photosModulePage = new PhotosModulePage_EY();
 
     @Then("the user should be on the dashboard")
     public void the_user_should_be_on_the_dashboard() {
     }
 
-    @Then("the user should be able to click on the Photos module")
-    public void the_user_should_be_able_to_click_on_the_photos_module() {
-        photosModulePage.photos.click();
-    }
 
     @Then("the user should be able to see the following submodules")
     public void the_user_should_be_able_to_see_the_following_submodules(List<String> expectedSubmodules) {

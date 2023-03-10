@@ -14,10 +14,6 @@ import java.util.List;
 
 public class US03_StepDefs {
 
-    @Then("the user should be on the dashboard")
-    public void theUserShouldBeOnTheDashboard() {
-    }
-
     @And("the user should see the below modules")
     public void theUserShouldSeeTheBelowModules(List<String> expectedModules) {
         System.out.println("Expected Modules = " + expectedModules);
@@ -70,6 +66,6 @@ public class US03_StepDefs {
 
         basePage_ey.tasks.click();
         BrowserUtils.verifyTitleContains("Tasks");
-        }
     }
+}
 

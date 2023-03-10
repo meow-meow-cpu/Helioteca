@@ -6,22 +6,23 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage_DY {
-    public LoginPage_DY(){
+    public LoginPage_DY() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
-    @FindBy (id ="user")
+
+    @FindBy(id = "user")
     public WebElement userName;
 
 
-    @FindBy(id ="password")
+    @FindBy(id = "password")
     public WebElement password;
 
 
-    @FindBy(id ="submit-form")
+    @FindBy(id = "submit-form")
     public WebElement loginBtn;
 
-    @FindBy(className = "warning wrongPasswordMsg")
+    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
     public WebElement wrongMsg;
 
-    }
+}
 

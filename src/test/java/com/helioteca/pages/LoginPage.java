@@ -8,35 +8,32 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {                                            //!!!!!!!!!!change locators!!!!!!!!!!!!!!
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
 
-    @FindBy (id ="user")
+    @FindBy(id = "user")
     public WebElement userName;
 
 
-    @FindBy(id ="password")
+    @FindBy(id = "password")
     public WebElement password;
 
 
-    @FindBy(id ="submit-form")
-   public WebElement loginBtn;
+    @FindBy(id = "submit-form")
+    public WebElement loginBtn;
 
-    @FindBy(xpath = "//p[@class='warning wrongPasswordMsg']")
-    public WebElement wrongMsg;
 
-   //@FindBy(className = "warning_wrongPasswordMsg")
+    //@FindBy(className = "warning_wrongPasswordMsg")
     //public WebElement wrongMsg;
-    
+
     public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         loginBtn.click();
         // verification that we logged
     }
-
 
 
 }

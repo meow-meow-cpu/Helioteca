@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FilesModulePage_EY {
 
-    public FilesModulePage_EY(){
+    public FilesModulePage_EY() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

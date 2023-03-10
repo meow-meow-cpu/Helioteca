@@ -1,13 +1,9 @@
 package com.helioteca.pages;
 
 import com.helioteca.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.awt.*;
-import java.util.List;
 
 public class FilePage_FB extends BasePage {
 
@@ -23,17 +19,11 @@ public class FilePage_FB extends BasePage {
 
  */
 
-    @FindBy(xpath = "//a[@href=\"/index.php/apps/files/\"]")
-    public WebElement fileInput;
+
 
     @FindBy(xpath = "//label[@for='select_all_files']")
     public WebElement selectAllCheckbox;
 
-    @FindBy(xpath = "//td[@class='selection']")
-    public WebElement allCheckboxes;
-
-    @FindBy(xpath = "//td[@class='selection']//label")
-    public WebElement fileCheckbox;
 
 
 

@@ -16,8 +16,9 @@ import org.junit.runner.RunWith;
         glue = "com/helioteca/step_definitions",
         dryRun = false,
         tags = "@wip",
-        publish = false //generating a report with public link
+        publish = true //generating a report with public link
 )
-public class CukesRunner {}
+public class CukesRunner {
+}
 
 

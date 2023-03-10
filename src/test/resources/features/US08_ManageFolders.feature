@@ -3,7 +3,6 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @wip
   Scenario Outline: Verify users can add the folder
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
@@ -17,11 +16,10 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
     Then Verify the folder "<name>" is displayed on the page
 
     Examples:
-      | username   | password    | name             |
-      | User81     | Userpass123 | New Folder6 User |
-      | Employee81 | Employee123 | New Folder6 Emp  |
+      | username   | password    | name              |
+      | User82     | Userpass123 | New Folder10 User |
+      | Employee82 | Employee123 | New Folder10 Emp  |
 
-  @wip
   Scenario Outline: Verify users can upload a file inside a folder
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
@@ -35,5 +33,5 @@ Feature: As a user, I should be able to remove files from the favorites and uplo
 
     Examples:
       | username   | password    | name             |
-      | User81    | Userpass123 | New Folder6 User |
-      | Employee81| Employee123 | New Folder6 Emp  |
+      | User82     | Userpass123 | New Folder6 User |
+      | Employee82 | Employee123 | New Folder6 Emp  |

@@ -2,37 +2,21 @@ package com.helioteca.step_definitions;
 
 import com.helioteca.pages.FilesPage_RE;
 import com.helioteca.utilities.BrowserUtils;
-import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US05_StepDefs {
-FilesPage_RE files_renita = new FilesPage_RE();
-    @Given("user on the dashboard page")
-    public void userOnTheDashboardPage() {
-        Driver.getDriver().get("https://qa.helioteca.com/index.php");
-         // get driver to go to the dashboard page
-
-
-    }
-
-    @When("the user clicks the Files module")
-    public void theUserClicksTheFilesModule() {
-        BrowserUtils.waitFor(2);
-        files_renita.files.click();
-        //create a locator for files module
-
-    }
+    FilesPage_RE files_renita = new FilesPage_RE();
 
     @When("the user clicks action-icon from any file on the page")
     public void theUserClicksActionIconFromAnyFileOnThePage() {
+        BrowserUtils.waitFor(2);
         files_renita.Actions.click();
 
 
-       // create a locator in pages_renita for action button
+        // create a locator in pages_renita for action button
 
 
     }
@@ -42,7 +26,7 @@ FilesPage_RE files_renita = new FilesPage_RE();
 
         files_renita.favorites.click();
 
-          //create locator for add to favorites in pages_renita
+        //create locator for add to favorites in pages_renita
 
     }
 

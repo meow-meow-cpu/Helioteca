@@ -1,4 +1,3 @@
-@wip
 Feature: Users should be able to login with user and employee credentials
 
 

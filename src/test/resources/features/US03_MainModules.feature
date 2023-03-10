@@ -3,7 +3,6 @@ Feature: Users should be able to access all the main modules of the app
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @emily
   Scenario Outline: Verify main modules are accessible
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
@@ -22,8 +21,8 @@ Feature: Users should be able to access all the main modules of the app
     Then the user should be able to click on each module and see each module page
 
     Examples:
-      | username  | password    |
-      | User1     | Userpass123 |
+      | username | password    |
+      | User1    | Userpass123 |
      # | User2     | Userpass123 |
      # | User3     | Userpass123 |
      # | User4     | Userpass123 |

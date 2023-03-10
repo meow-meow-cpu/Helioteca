@@ -2,13 +2,10 @@ package com.helioteca.step_definitions;
 
 import com.helioteca.pages.UploadFilePage_RA;
 import com.helioteca.utilities.BrowserUtils;
-import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-import org.openqa.selenium.By;
 
 import java.io.File;
 
@@ -19,11 +16,6 @@ public class US07_StepDefs {
     @Given("user on the dashboard page")
     public void userOnTheDashboardPage() {
         uploadFilePageRa.dashboardPage.click();
-    }
-
-    @When("the user clicks the {string} module")
-    public void theUserClicksTheModule(String moduleName) {
-        uploadFilePageRa.navigateToModule(moduleName).click();
     }
 
     @When("the user clicks the add icon on the top")

@@ -1,9 +1,9 @@
 package com.helioteca.step_definitions;
 
 import com.helioteca.pages.FilesPage_AO;
+import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -16,19 +16,6 @@ import java.io.File;
 import java.time.Duration;
 
 public class US08_StepDefs extends FilesPage_AO {
-
-
-    //FilesPage filesPage = new FilesPage();
-    //BasePage basePage = new BasePage();
-    @Given("user on the dashboard page")
-    public void userOnTheDashboardPage() {
-
-    }
-
-    @When("the user clicks the Files module")
-    public void theUserClicksTheModule() {
-        //files.click();
-    }
 
     @And("user clicks the add icon on the top")
     public void userClicksTheAddIconOnTheTop() {
@@ -64,6 +51,12 @@ public class US08_StepDefs extends FilesPage_AO {
         WebElement newFolder = Driver.getDriver().findElement(By.xpath("//span[text()='" + fldrName + "']"));
         //Assert.assertTrue(newFolder.isDisplayed());
         Assert.assertEquals(newFolder.getText(), fldrName);
+        BrowserUtils.waitFor(2);
+        WebElement folderActions = Driver.getDriver().findElement(By.xpath("//span[text()='" + fldrName + "']/parent::span/parent::a/span[@class='fileactions']/a[2]"));
+        folderActions.click();
+        pressDelete();
+
+
     }
 
 

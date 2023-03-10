@@ -2,20 +2,12 @@ package com.helioteca.step_definitions;
 
 import com.helioteca.pages.FilesModulePage_EY;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class US11_StepDefs {
 
     FilesModulePage_EY filesModulePage_ey = new FilesModulePage_EY();
-    @Then("the user should be on the dashboard")
-    public void the_user_should_be_on_the_dashboard() {
-    }
 
-    @When("the user clicks on the Files module")
-    public void the_user_clicks_on_the_files_module() {
-        filesModulePage_ey.files.click();
-    }
 
     @Then("the user clicks on action icon from any file on the page")
     public void the_user_clicks_on_action_icon_from_any_file_on_the_page() {
