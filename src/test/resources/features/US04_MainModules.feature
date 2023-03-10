@@ -18,7 +18,6 @@ Feature: Users should be able to login with user and employee credentials
       | User129     | Userpass123 |
       | Employee129 | Employee123 |
 
-  @wip
   Scenario Outline: verify users can select all the uploaded files from the page
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
