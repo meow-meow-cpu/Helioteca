@@ -42,6 +42,7 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
     @FindBy()                     //Ali
     public WebElement files;
 
+
     @FindBy()                     //Dili
     public WebElement photos;
 
