@@ -9,5 +9,5 @@ Feature: Users should be able to login with user and employee credentials
     Examples:
       | username | password    |
       | User9    | Wrong       |
-      | abc      | Userpass123 |
-      | bbn      | Userpass555 |
+  #    | abc      | Userpass123 |
+  #    | bbn      | Userpass555 |

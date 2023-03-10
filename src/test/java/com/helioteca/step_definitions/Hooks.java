@@ -24,13 +24,13 @@ public class Hooks {
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        //Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
     //@Before (value = "@login", order = 2 )
-    public void login_scenario_before() {
-        System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
-    }
+    //public void login_scenario_before() {
+       //System.out.println("---> @Before: RUNNING BEFORE EACH SCENARIO");
+   // }
 
     /*
     @After will be executed automatically after EVERY scenario in the project.
@@ -44,8 +44,6 @@ public class Hooks {
             scenario.attach(screenshot, "image/png", scenario.getName());
 
         }
-
-
         BrowserUtils.sleep(2);
         Driver.closeDriver();
 
