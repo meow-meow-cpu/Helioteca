@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.File;
 import java.time.Duration;
 
-public class ManageFoldersStepDefs extends FilesPage_AO {
+public class US08_StepDefs extends FilesPage_AO {
 
 
     //FilesPage filesPage = new FilesPage();

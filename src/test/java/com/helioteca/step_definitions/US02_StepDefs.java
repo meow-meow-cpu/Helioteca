@@ -1,7 +1,6 @@
 package com.helioteca.step_definitions;
 
 
-import com.helioteca.pages.LoginPage;
 import com.helioteca.pages.LoginPage_DY;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -10,7 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US02_StepDefs extends LoginPage {
+public class US02_StepDefs extends LoginPage_DY {
    //LoginPage_DY loginpage = new LoginPage_DY();
 
     @Given("the user is on the login page")

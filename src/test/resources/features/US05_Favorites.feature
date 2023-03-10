@@ -1,4 +1,4 @@
-Feature: Users should be able to login with user and employee credentials
+Feature: As a user, I should be able to access to Files module - Favorites button
 
 
   Background: User is already in the log in page

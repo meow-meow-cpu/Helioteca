@@ -1,12 +1,11 @@
 package com.helioteca.step_definitions;
 
 import com.helioteca.pages.FilesModulePage_EY;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class US11StepDefs_EY {
+public class US11_StepDefs {
 
     FilesModulePage_EY filesModulePage_ey = new FilesModulePage_EY();
     @Then("the user should be on the dashboard")

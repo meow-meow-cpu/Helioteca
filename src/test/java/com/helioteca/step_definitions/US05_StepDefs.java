@@ -1,6 +1,6 @@
 package com.helioteca.step_definitions;
 
-import com.helioteca.pages.US05page_renita;
+import com.helioteca.pages.FilesPage_RE;
 import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -8,13 +8,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 public class US05_StepDefs {
-US05page_renita files_renita = new US05page_renita();
+FilesPage_RE files_renita = new FilesPage_RE();
     @Given("user on the dashboard page")
     public void userOnTheDashboardPage() {
         Driver.getDriver().get("https://qa.helioteca.com/index.php");

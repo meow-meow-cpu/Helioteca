@@ -1,7 +1,6 @@
 package com.helioteca.step_definitions;
 
-import com.helioteca.pages.PhotosModulePage;
-import com.helioteca.utilities.BrowserUtils;
+import com.helioteca.pages.PhotosModulePage_EY;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -11,9 +10,9 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PhotosModuleStepDefs_EY {
+public class US14_StepDefs {
 
-    PhotosModulePage photosModulePage = new PhotosModulePage();
+    PhotosModulePage_EY photosModulePage = new PhotosModulePage_EY();
 
     @Then("the user should be on the dashboard")
     public void the_user_should_be_on_the_dashboard() {

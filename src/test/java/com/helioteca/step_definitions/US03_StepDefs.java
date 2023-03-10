@@ -5,17 +5,14 @@ import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.apache.commons.io.input.BrokenInputStream;
-import org.jsoup.Connection;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-public class MainModulesStepDefs_EY {
+public class US03_StepDefs {
 
     @Then("the user should be on the dashboard")
     public void theUserShouldBeOnTheDashboard() {
