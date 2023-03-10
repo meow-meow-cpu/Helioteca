@@ -6,6 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class US06_StepDefs_RA {
 
@@ -21,16 +22,6 @@ public class US06_StepDefs_RA {
         removeFromFavoritesPageRA.navigateToModule(moduleName).click();
     }
 
-//    @When("the user clicks the add icon on the top")
-//    public void theUserClicksTheAddIconOnTheTop() {
-//        removeFromFavoritesPageRA.addIconBtn.click();
-//    }
-//
-//    @And("user by clicking {string} option creates new folder with {string} name")
-//    public void userByClickingOptionCreatesNewFolderWithName(String optionName, String folderName) {
-//        removeFromFavoritesPageRA.addFolder(optionName,folderName);
-//    }
-
     @Then("the user clicks action icon from created folder")
     public void theUserClicksActionIconFromCreatedFolder() {
         removeFromFavoritesPageRA.actionBtn.click();
@@ -39,38 +30,27 @@ public class US06_StepDefs_RA {
     @And("user choose {string} option")
     public void userChooseOption(String optionName) {
         removeFromFavoritesPageRA.navigateToOption(optionName).click();
+        BrowserUtils.sleep(1);
     }
 
     @When("the users clicks action icon from created folder")
     public void theUsersClicksActionIconFromCreatedFolder() {
         removeFromFavoritesPageRA.actionBtn.click();
-        BrowserUtils.sleep(5);
+        BrowserUtils.sleep(1);
+    }
+    @And("user choose the {string} option")
+    public void userChooseTheOption(String optionName) {
+        removeFromFavoritesPageRA.navigateToOption(optionName).click();
+        BrowserUtils.sleep(1);
     }
 
-//    @And("user choose the {string} option")
-//    public void userChooseTheOption(String optionName) {
-//        removeFromFavoritesPageRA.navigateToOption(optionName).click();
-//    }
+    @And("user click the {string} sub module on the left side")
+    public void userClickTheSubModuleOnTheLeftSide(String subModule) {
+        removeFromFavoritesPageRA.navigateToSubModule(subModule).click();
+    }
 
-//    @When("the users clicks action icon from created folder")
-//    public void theUsersClicksActionIconFromAnyFileOrFolderOnThePageToRemove() {
-//        removeFromFavoritesPageRA.favoriteActionBtn.click();
-//    }
-//
-//    @And("user choose the {string} option")
-//    public void userChooseTheOption(String optionName) {
-//        removeFromFavoritesPageRA.navigateToOption(optionName).click();
-//    }
-//
-//    @And("user click the {string} sub module on the left side")
-//    public void userClickTheSubModuleOnTheLeftSide(String subModuleName) {
-//        removeFromFavoritesPageRA.favoritesSubModule.click();
-//    }
-//
-//    @Then("Verify that the file is not listed in the Favorites table")
-//    public void verifyThatTheFileIsNotListedInTheFavoritesTable() {
-//
-//    }
-
-
+    @Then("Verify that the folder is not listed in the Favorites table")
+    public void verifyThatTheFolderIsNotListedInTheFavoritesTable() {
+        BrowserUtils.verifyElementNotDisplayed(By.xpath("//table[@class='list-container']//tr[@data-file='Helioteca']"));
+    }
 }
