@@ -1,8 +1,5 @@
 package com.helioteca.pages;
 
-
-
-
 import com.helioteca.utilities.BrowserUtils;
 import com.helioteca.utilities.Driver;
 import org.openqa.selenium.By;
@@ -15,49 +12,48 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.List;
 
-public abstract class BasePage {                        //!!!!!!!!!!change locators!!!!!!!!!!!!!!
+public class BasePage_EY {
 
-    public BasePage() {
+
+    public BasePage_EY() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    public void navigateTo(String page){
-        WebElement linkToPage = Driver.getDriver().findElement(By.xpath("//a[@aria-label='"+page+"']"));
+    public void navigateTo(String page) {
+        WebElement linkToPage = Driver.getDriver().findElement(By.xpath("//a[@aria-label='" + page + "']"));
         linkToPage.click();
     }
 
-    @FindBy()                     //Ali
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Files']")
     public WebElement files;
 
-    @FindBy()                     //Dili
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Photos']")
     public WebElement photos;
 
-    @FindBy()                     //Narmin
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Activity']")
     public WebElement activity;
 
-    @FindBy()                     //Ferid
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Mail']")
     public WebElement mail;
 
-    @FindBy()                     //Mustakima
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Contacts']")
     public WebElement contacts;
 
-    @FindBy()                     //Ali
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Calendar']")
     public WebElement calendar;
 
-    @FindBy()                     //Dili
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Notes']")
     public WebElement notes;
 
-    @FindBy()                     //Narmin
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Deck']")
     public WebElement deck;
 
-    @FindBy()                     //Ferid
+    @FindBy(xpath = "//ul[@id='appmenu']/li/a[@aria-label='Tasks']")
     public WebElement tasks;
 
-    @FindBy()                     //Mustakima
+    @FindBy()
     public WebElement logOutBtn;
-
 
 
     //Something advanced is below, I don't think we will need it at this stage//
@@ -121,7 +117,7 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
             Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
         } catch (Exception e) {
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
-            BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
+            BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)), 5);
         }
     }
 
