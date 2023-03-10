@@ -1,14 +1,16 @@
+Feature: As a user, I should be able to update settings.
 
-Feature: Users should be able to login with user and employee credentials
 
-
- Background: User is already in the log in page
+  Background: User is already in the log in page
     Given the user is on the login page
 
+  @wip
   Scenario Outline: Verify login
     Given the user enters correct username "<username>"
     Then the user enters correct password "<password>"
     And the user clicks on Log in button
+
+
 
     Examples:
       | username  | password    |
@@ -22,9 +24,12 @@ Feature: Users should be able to login with user and employee credentials
      # | Employee3 | Employee123 |
      # | Employee4 | Employee123 |
      # | Employee5 | Employee123 |
-      #add more username and password if needed
 
 
-  #Scenario: Verify login with different user types
-  #  Given the user logged in as "<userType>"
-  #  Given the user logged in with username as "User1" and password as "UserUser123"
+  Scenario: Verify users update settings
+    Given user on the dashboard page
+    When the user clicks the "Files" module
+    And user clicks Settings on the left bottom corner
+    Then the user should be able to click any buttons
+
+
