@@ -35,15 +35,23 @@ public class US04_StepDefs{
     @And("user click the top-left checkbox of the table")
     public void userClickTheTopLeftCheckboxOfTheTable() {
         filePage_fb.selectAllCheckbox.click();
+        BrowserUtils.sleep(3);
     }
 
     @Then("verify all the files are selected")
     public void verifyAllTheFilesAreSelected() {
-        List<WebElement> selectedCheckboxWebElement = Driver.getDriver().findElements(By.xpath("//tbody[@id='fileList']/tr/td[@class='selection']/label"));
 
-        for (WebElement each : selectedCheckboxWebElement) {
+
+        List<WebElement> checkboxes = Driver.getDriver().findElements(By.xpath("//td[@class='selection']/input"));
+
+        for (WebElement each : checkboxes) {
             Assert.assertTrue(each.isSelected());
         }
+
+
+
+
+
     }
 
 }

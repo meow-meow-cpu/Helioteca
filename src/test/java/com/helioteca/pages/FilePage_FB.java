@@ -7,12 +7,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.awt.*;
+import java.util.List;
 
 public class FilePage_FB extends BasePage {
 
 
-    public FilePage_FB(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public FilePage_FB() {
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 /*
     public void navigateTo(String page) {
@@ -27,6 +28,12 @@ public class FilePage_FB extends BasePage {
 
     @FindBy(xpath = "//label[@for='select_all_files']")
     public WebElement selectAllCheckbox;
+
+    @FindBy(xpath = "//td[@class='selection']")
+    public WebElement allCheckboxes;
+
+    @FindBy(xpath = "//td[@class='selection']//label")
+    public WebElement fileCheckbox;
 
 
 
