@@ -23,10 +23,21 @@ public abstract class BasePage {                        //!!!!!!!!!!change locat
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+
+    @FindBy(xpath = "//div[@class='header-menu unified-search']")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "//input[@type='search']")
+    public WebElement searchBox;
+
+    @FindBy(xpath = "//*[@id=\"header-menu-unified-search\"]/div[2]/ul/li[1]/a/span/h3/span/strong")
+    public WebElement searchResult;
+
     public void navigateTo(String page){
         WebElement linkToPage = Driver.getDriver().findElement(By.xpath("//a[@aria-label='"+page+"']"));
         linkToPage.click();
     }
+
 
     @FindBy()                     //Ali
     public WebElement files;
